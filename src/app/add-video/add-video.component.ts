@@ -28,7 +28,11 @@ export class AddVideoComponent implements OnInit {
     } else {
       videoId = this.value;
     }
-    this._genericService.post(API_CONSTANTS.ADD_NEW_VIDEO + '?videoId=' + videoId).subscribe((result: any) => {
+
+    let params ={
+      'videoId': videoId
+    }
+    this._genericService.post(API_CONSTANTS.ADD_NEW_VIDEO, params).subscribe((result: any) => {
       console.log('add video', result['responseBody']);
       this.value = '';
     })
