@@ -1,0 +1,6 @@
+{
+    "/api/*": {
+        "target": "https://dark-mel-cloudstore.koyeb.app/",
+        "secure": true
+    }
+}

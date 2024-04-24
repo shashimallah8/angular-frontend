@@ -1,1 +1,8 @@
-<p>video-list works!</p>
+<div class="category-food">
+    <div class="food-item" *ngFor="let video of videoList;let i = index;">
+        <div class="card-img-top center">
+            <iframe width="300" height="240" [src]="video?.id | safe" scrolling="no"
+                frameborder="0" allowfullscreen="true"></iframe>
+        </div>
+    </div>
+</div>
