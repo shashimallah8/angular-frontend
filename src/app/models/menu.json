@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Add video",
+        "route": "add-video"
+    },
+    {
+        "name": "Watch videos",
+        "route": "watch-videos"
+    }
+]
