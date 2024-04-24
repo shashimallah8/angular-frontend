@@ -17,6 +17,8 @@ export class GenericService {
   get(endpoint: string, extraHeaders?: any) {
     let headers = new HttpHeaders({
       "Access-Control-Allow-Origin": "*",
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization'
     });
     for (let headerKey in extraHeaders) {
       headers.append(headerKey, extraHeaders[headerKey]);
