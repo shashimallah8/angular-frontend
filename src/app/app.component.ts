@@ -17,15 +17,15 @@ export class SafePipe implements PipeTransform {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
-  menuItems: any[]=[];
+  menuItems: any[] = [];
 
-  constructor(){
+  constructor() {
     this.menuItems = data;
   }
+  
   ngOnInit(): void {
-   console.log(data)
   }
 
 }

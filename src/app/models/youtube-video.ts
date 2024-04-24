@@ -1,3 +1,4 @@
 export interface YoutubeVideo{
-    id: string
+    videoId: string,
+    url: string
 }

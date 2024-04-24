@@ -10,20 +10,25 @@ import { API_CONSTANTS } from '../constants/API_CONSTANTS';
 })
 export class VideoListComponent implements OnInit {
 
-  videoList: YoutubeVideo[]= [];
+  embeddedUrlList: any[] = [];
 
   constructor(
     private _genericService: GenericService
-  ) { 
-    this.getVideoList();
+  ) {
+    this.getVideoList()
   }
 
   ngOnInit(): void {
   }
 
-  async getVideoList(){
-    await this._genericService.get(API_CONSTANTS.GET_VIDEO_LIST).subscribe((result:any) => {
-      return result['responseBody'];
+  getVideoList() {
+    this._genericService.get(API_CONSTANTS.GET_VIDEO_LIST).subscribe((result: any) => {
+      const data = result['responseBody'];
+      data.forEach((element: any) => {
+        let url = 'https://www.youtube.com/embed/' + element + '?mute=1';
+        this.embeddedUrlList = [...this.embeddedUrlList, url];
+      });
+      console.log('embeddedUrlList', this.embeddedUrlList)
     });
   }
 
