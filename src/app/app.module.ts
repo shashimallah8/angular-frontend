@@ -11,6 +11,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 import { VideoListComponent } from './video-list/video-list.component';
 import { AddVideoComponent } from './add-video/add-video.component';
@@ -28,12 +30,14 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

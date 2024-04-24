@@ -25,7 +25,7 @@ export class VideoListComponent implements OnInit {
     this._genericService.get(API_CONSTANTS.GET_VIDEO_LIST).subscribe((result: any) => {
       const data = result['responseBody'];
       data.forEach((element: any) => {
-        let url = 'https://www.youtube.com/embed/' + element + '?mute=1';
+        let url = 'https://www.youtube.com/embed/' + element?.videoId + '?mute=1';
         this.embeddedUrlList = [...this.embeddedUrlList, url];
       });
       console.log('embeddedUrlList', this.embeddedUrlList)
