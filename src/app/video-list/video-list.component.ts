@@ -26,9 +26,14 @@ export class VideoListComponent implements OnInit {
       const data = result['responseBody'];
       data.forEach((element: any) => {
         let url = 'https://www.youtube.com/embed/' + element?.videoId + '?mute=1';
-        this.embeddedUrlList = [...this.embeddedUrlList, url];
+        let iframe = document.createElement('iframe');
+        // var url = "https://www.google.com";
+        /* iframe.setAttribute("src", url); */
+        iframe.src = url;
+        document.body.appendChild(iframe);
+        // this.embeddedUrlList = [...this.embeddedUrlList, url];
       });
-      console.log('embeddedUrlList', this.embeddedUrlList)
+      // console.log('embeddedUrlList', this.embeddedUrlList)
     });
   }
 
