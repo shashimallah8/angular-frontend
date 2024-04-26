@@ -34,7 +34,6 @@ export class SendMessagesComponent implements OnInit {
   whatsappUrl: string = 'https://api.whatsapp.com/send?phone=';
 
   loadData() {
-    let contacts = ["918446902106"];
     let self = this;
     contacts.forEach((contact: string) => {
       let button = document.createElement("input");
