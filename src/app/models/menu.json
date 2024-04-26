@@ -6,5 +6,9 @@
     {
         "name": "Watch videos",
         "route": "watch-videos"
+    },
+    {
+        "name": "Send Link",
+        "route": "send-link"
     }
 ]

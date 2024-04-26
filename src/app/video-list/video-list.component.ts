@@ -30,9 +30,8 @@ export class VideoListComponent implements OnInit {
         // var url = "https://www.google.com";
         /* iframe.setAttribute("src", url); */
         iframe.src = url;
-        document.body.appendChild(iframe);
-        // this.embeddedUrlList = [...this.embeddedUrlList, url];
-      });
+        document.getElementById('load-videos').appendChild(iframe);
+   });
       // console.log('embeddedUrlList', this.embeddedUrlList)
     });
   }

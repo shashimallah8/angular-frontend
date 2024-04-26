@@ -17,13 +17,15 @@ import { FormsModule } from '@angular/forms';
 import { VideoListComponent } from './video-list/video-list.component';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SendMessagesComponent } from './send-messages/send-messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoListComponent,
     AddVideoComponent,
-    SafePipe
+    SafePipe,
+    SendMessagesComponent
   ],
   imports: [
     BrowserModule,
