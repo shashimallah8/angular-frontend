@@ -42,7 +42,6 @@ export class SendMessagesComponent implements OnInit {
       button.value = contact;
       button.style.setProperty('margin-left', '15px');
       button.setAttribute('class', 'primary_button');
-      button.setAttribute('href', 'primary_button');
       button.style.setProperty('margin-top', '15px');
       button.onclick = function () {
         if (self.sharedLink === '') {
