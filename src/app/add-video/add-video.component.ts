@@ -22,7 +22,7 @@ export class AddVideoComponent implements OnInit {
 
   submit() {
     let videoId: string | null = '';
-    if (this.value.includes('youtube.com')) {
+    if (this.value.includes('youtu')) {
       let regex = /(youtu.*be.*)\/(watch\?v=|embed\/|v|shorts|)(.*?((?=[&#?])|$))/gm;
       videoId = regex.exec(this.value)[3];
     } else {
